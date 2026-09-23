@@ -1,5 +1,6 @@
 import { iApp } from '@/types/appTypes';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface AppCardProps {
@@ -65,9 +66,9 @@ const AppCard = ({ app }: AppCardProps) => {
                     <span className="text-sm font-semibold text-gray-700">{app.downloads}</span>
                 </div>
                 
-                <button className="bg-purple-600 hover:bg-purple-700 active:scale-95 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-all duration-200 shadow-sm shadow-purple-200">
-                    Install
-                </button>
+                <Link href={`/apps/${app.id}`}><button className="bg-purple-600 hover:bg-purple-700 active:scale-95 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-all duration-200 shadow-sm shadow-purple-200">
+                    Details
+                </button></Link>
             </div>
 
         </div>
