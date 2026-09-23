@@ -31,7 +31,7 @@ const TrendingApps = async () => {
                 {/* Apps Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {
-                        apps.map((app: iApp) => {
+                        apps.slice(0,6).map((app: iApp) => {
                             return <AppCard app={app} key={app.id} />
                         })
                     }
