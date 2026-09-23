@@ -1,3 +1,4 @@
+import InstallButton from '@/components/InstallButton';
 import { iApp } from '@/types/appTypes';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -96,9 +97,7 @@ const AppDetailsPage = async ({ params }: AppDetailsPageProps) => {
                 <button className="btn btn-circle btn-ghost">
                   <FiShare2 size={20} />
                 </button>
-                <button className="btn btn-primary gap-2 rounded-full px-6">
-                  <FiDownload /> Install
-                </button>
+                <InstallButton app={app}></InstallButton>
               </div>
             </div>
           </div>
